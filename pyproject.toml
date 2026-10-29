@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hyprland-migrator"
+version = "0.1.1"
+description = "Conservative Hyprland hyprlang to Lua configuration migrator"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+hyprland-migrator = "hyprland_migrator.cli:main"
+
+[tool.setuptools.package-data]
+hyprland_migrator = ["options.json"]
+
+[tool.setuptools.packages.find]
+include = ["hyprland_migrator*"]
